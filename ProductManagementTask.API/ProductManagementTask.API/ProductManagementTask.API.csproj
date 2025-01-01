@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductManagementTask.Applications\ProductManagementTask.Applications.csproj" />
+    <ProjectReference Include="..\ProductManagementTask.Infrastructure\ProductManagementTask.Infrastructure.csproj" />
+    <ProjectReference Include="..\ProductManagementTask.Presistence\ProductManagementTask.Presistence.csproj" />
+    <ProjectReference Include="..\ProductManagementTask.SharedKernal\ProductManagementTask.SharedKernal.csproj" />
+  </ItemGroup>
+
+</Project>

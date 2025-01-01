@@ -1,0 +1,69 @@
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+  <p-floatlabel variant="in">
+    <input
+      pInputText
+      id="nameId"
+      formControlName="name"
+      autocomplete="off"
+      class="w-100 my-2"
+    />
+    <label for="nameId">Name</label>
+  </p-floatlabel>
+  <div *ngIf="hasError('name','required')" class="text-danger">
+    Name is required.
+  </div>
+  <div *ngIf="hasError('name','maxlength')" class="text-danger">
+    Name must be at less than 100 characters.
+  </div>
+  <p-floatlabel variant="in">
+    <textarea
+      pTextarea
+      id="descriptionId"
+      formControlName="description"
+      rows="5"
+      cols="30"
+      class="w-100 my-2"
+      style="resize: none"
+    ></textarea>
+    <label for="descriptionId">Description</label>
+  </p-floatlabel>
+  <div *ngIf="hasError('description','required')"  class="text-danger">
+    Description is required.
+  </div>
+  <div *ngIf="hasError('description','maxlength')" class="text-danger">
+    Description must be at less than 500 characters.
+  </div>
+  <p-floatlabel variant="in">
+    <p-inputnumber
+      id="price"
+      formControlName="price"
+      autocomplete="off"
+      class="w-100"
+    />
+    <label for="priceId">Price</label>
+  </p-floatlabel>
+  <div *ngIf="hasError('price','required')" class="text-danger">
+    Price is required.
+  </div>
+  <div *ngIf="hasError('price','min')" class="text-danger">
+    Price must be at greater than 1 .
+  </div>
+  <div class="mt-3">
+    <button
+      pButton
+      label="Save"
+      icon="pi pi-check"
+      [disabled]="productForm.invalid"
+      type="submit"
+      class="p-button-success"
+    ></button>
+    <button
+      pButton
+      label="Cancel"
+      icon="pi pi-times"
+      type="button"
+      (click)="cancelForm()"
+      class="p-button-secondary ml-2"
+    ></button>
+  </div>
+</form>
