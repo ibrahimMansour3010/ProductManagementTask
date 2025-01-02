@@ -38,12 +38,12 @@ Ensure you have the following installed on your system:
    ```bash
    dotnet run
    ```
-4. The API will be accessible at `https://localhost:<port>` (check the terminal output for the exact port).
+4. The API will be accessible at `https://localhost:51208` (check the terminal output for the exact port).
 
 ### 4. Run the Angular Project
 1. Navigate to the `Angular` project folder using a terminal:
    ```bash
-   cd path/to/angular/project
+   cd path/ProductManagementTask.clientApp
    ```
 2. Install dependencies:
    ```bash
